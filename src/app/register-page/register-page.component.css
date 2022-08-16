@@ -1,0 +1,52 @@
+.hero .form-container{
+    width: 50%;
+    background-color: var(--white);
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.example-form{
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    
+}
+
+.full-width-field{
+    width: 100%;
+    position: relative;
+}
+.passwordfield{
+    position: absolute;
+    right: -15px;
+    top: -15px;
+}
+.loginbtn{
+    width: 100% !important;
+}
+
+@media (max-width: 575.98px) { 
+    .hero .form-container{
+        width: 95%;
+    }
+ }
+
+ @media (min-width: 576px) and (max-width: 767.98px) {
+    .hero .form-container{
+        width: 80%;
+       
+    }
+ }
+
+
+ @media (min-width: 768px) and (max-width: 991.98px) { 
+    .hero .form-container{
+        width: 80%;
+       
+    }
+  }

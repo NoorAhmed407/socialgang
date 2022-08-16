@@ -1,0 +1,33 @@
+<div class="hero">
+    <app-auth-header></app-auth-header>
+
+    <div class="form-container">
+        <div class="my-4 text-center">
+            <h1 class="font-weight-bold">Register yourself!</h1>
+            <div class="line"></div>
+        </div>
+
+        <form class="example-form">
+            <mat-form-field class="full-width-field" appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput type="text" placeholder="Your Name" value="">
+              </mat-form-field>
+
+            <mat-form-field class="full-width-field" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput type="email" placeholder="abc@test.com" value="">
+            </mat-form-field>
+
+            <mat-form-field class="full-width-field" appearance="fill">
+               
+                <mat-label>Password</mat-label>
+                <input matInput type="password" placeholder="your password here" value="">
+              </mat-form-field>
+
+              <button mat-raised-button class="loginbtn" color="primary">Register</button>
+          </form>
+
+          <h5 class="mb-3">Already have an Account? <a routerLink="/login">Login</a></h5>
+    </div>
+
+</div>

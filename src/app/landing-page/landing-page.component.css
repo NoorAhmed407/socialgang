@@ -1,0 +1,42 @@
+
+
+.hero .central-container{
+    height: 80%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .central-container h1{
+    color: var(--white);
+    font-size: 5rem;
+    text-align: center;
+}
+
+.hero .central-container .highlighted-text{
+    padding: 3px 5px;
+    color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+.float-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+
+@media (max-width: 767.98px) { 
+
+.hero .central-container{
+  width: 100%;
+}   
+.hero .central-container h1{
+    color: var(--white);
+    font-size: 3rem;
+    text-align: center;
+}
+}
