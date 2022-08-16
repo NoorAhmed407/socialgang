@@ -1,0 +1,28 @@
+<app-app-header></app-app-header>
+
+<div class="container">
+    <h1 class="screen-title">Profile</h1>
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <h3 class="my-3">Personal Information</h3>
+        <ngp-image-picker [_config]="imagePickerConf" ($imageChanged)="onImageChange($event)"></ngp-image-picker>
+    </div>
+    <form class="example-form mt-3">
+        <mat-form-field class="full-width-field" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" placeholder="Your Name" value="">
+          </mat-form-field>
+
+        <mat-form-field class="full-width-field" appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" placeholder="abc@test.com" value="">
+        </mat-form-field>
+
+        <mat-form-field class="full-width-field" appearance="fill">
+           
+            <mat-label>Password</mat-label>
+            <input matInput type="password" placeholder="your password here" value="">
+          </mat-form-field>
+
+          <button mat-raised-button class="loginbtn" color="primary">Update</button>
+      </form>
+</div>

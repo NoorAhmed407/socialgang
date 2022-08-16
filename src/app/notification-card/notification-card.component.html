@@ -1,0 +1,10 @@
+<mat-card [class]="notification.read ? '' : 'card-style'">
+    <mat-card-title [class]="notification.read ? '' : 'text-white'">{{notification.title}}</mat-card-title>
+    <mat-card-content [class]="notification.read ? '' : 'text-white'">{{notification.description}}
+        <div *ngIf="!notification.read" class="text-end">
+            <button (click)="clickRead()" mat-raised-button  color="warn">Read</button>
+        </div>
+    </mat-card-content>
+
+
+</mat-card>

@@ -16,6 +16,16 @@ import { AuthHeaderComponent } from './auth-header/auth-header.component';
 import {MatInputModule} from '@angular/material/input';
 import { ToastrModule } from 'ngx-toastr';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { PostCardComponent } from './post-card/post-card.component';
+import { PostsListComponent } from './posts-list/posts-list.component';
+import { AppHeaderComponent } from './app-header/app-header.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { NotificationsPageComponent } from './notifications-page/notifications-page.component';
+import { NotificationCardComponent } from './notification-card/notification-card.component';
+import {MatCardModule} from '@angular/material/card';
+import { NgpImagePickerModule } from 'ngp-image-picker';
 
 @NgModule({
   declarations: [
@@ -24,7 +34,14 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     NotFoundPageComponent,
     LoginPageComponent,
     RegisterPageComponent,
-    AuthHeaderComponent
+    AuthHeaderComponent,
+    PostCardComponent,
+    PostsListComponent,
+    AppHeaderComponent,
+    ProfilePageComponent,
+    HomePageComponent,
+    NotificationsPageComponent,
+    NotificationCardComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +49,9 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     NgbModule,
     ReactiveFormsModule,
     FormsModule,
+    NgpImagePickerModule,
+    MatToolbarModule,
+    MatCardModule,
     MatIconModule, 
     MatProgressSpinnerModule,
     MatInputModule,

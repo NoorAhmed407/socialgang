@@ -1,0 +1,14 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .hub-style{
+    padding: 5px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    margin-left: 5px;
+    border-radius: 5px;
+}
+.logo{
+    cursor: pointer;
+}

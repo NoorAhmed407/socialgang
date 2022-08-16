@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -16,7 +17,7 @@ export class LoginPageComponent implements OnInit {
   seePassword: boolean = false;
   loading:boolean = false;
 
-  constructor(private toastr: ToastrService) { }
+  constructor(private toastr: ToastrService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -31,7 +32,6 @@ export class LoginPageComponent implements OnInit {
 
 
   loginUser():any{
-    alert('a')
     const email:any = this.loginForm.value.email;
     const password:any = this.loginForm.value.password;
 
@@ -46,6 +46,7 @@ export class LoginPageComponent implements OnInit {
     setTimeout(()=>{
       this.loading = false;
       this.toastr.success('User Loggedin Successfully');
+      this.router.navigateByUrl('/home');
 
     },3000)
 

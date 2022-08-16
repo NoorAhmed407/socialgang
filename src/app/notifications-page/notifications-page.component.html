@@ -1,0 +1,13 @@
+<app-app-header></app-app-header>
+
+
+<div class="container">
+    <h1 class="screen-title">Notifications</h1>
+    <div class="container">
+        <div class="my-3" *ngFor="let item of notificationData; ind of index">
+            <app-notification-card (onClickRead)="readNotification($event)" [notification]="item"></app-notification-card>
+        </div>
+       
+    </div>
+</div>
+
