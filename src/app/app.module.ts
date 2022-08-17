@@ -26,6 +26,7 @@ import { NotificationsPageComponent } from './notifications-page/notifications-p
 import { NotificationCardComponent } from './notification-card/notification-card.component';
 import {MatCardModule} from '@angular/material/card';
 import { NgpImagePickerModule } from 'ngp-image-picker';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { NgpImagePickerModule } from 'ngp-image-picker';
     MatInputModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(), // ToastrModule added
-    MatButtonModule
+    MatButtonModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
