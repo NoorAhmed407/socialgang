@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ImagePickerConf } from 'ngp-image-picker';
 
 @Component({
@@ -13,13 +14,17 @@ export class ProfilePageComponent implements OnInit {
     width: '150px',
     height: '150px',
   };
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onImageChange(image:any){
     console.log('first', image);
+  }
+
+  clickAddPost(){
+    this.router.navigateByUrl('/addPost');
   }
 
 }
