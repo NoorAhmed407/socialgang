@@ -1,4 +1,11 @@
 <app-app-header></app-app-header>
 <div class="container">
     <h1 class="screen-title">News Feed</h1>
+    <div class="text-end" (click)="clickAddPost()">
+        <button mat-raised-button color="primary" >Add Post</button>
+    </div>
+</div>
+
+<div class="my-3 list-style">
+    <app-posts-list></app-posts-list>
 </div>

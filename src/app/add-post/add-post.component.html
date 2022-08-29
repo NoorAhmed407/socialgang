@@ -1,0 +1,23 @@
+<app-app-header></app-app-header>
+
+<div class="container">
+    <h1 class="screen-title">Add Post</h1>
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <ngp-image-picker [_config]="imagePickerConf" ($imageChanged)="onImageChange($event)"></ngp-image-picker>
+    </div>
+    <form class="example-form mt-3">
+        <mat-form-field class="full-width-field" appearance="fill">
+            <mat-label>Title</mat-label>
+            <input matInput type="text" placeholder="Title" value="">
+          </mat-form-field>
+
+          <mat-form-field class="full-width-field" appearance="fill">
+            <mat-label>Description</mat-label>
+            <textarea matInput rows="5" placeholder="Ex. It makes me feel..."></textarea>
+          </mat-form-field>
+
+          <button mat-raised-button class="loginbtn" color="primary">Submit</button>
+      </form>
+
+
+</div>

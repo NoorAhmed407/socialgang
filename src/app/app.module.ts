@@ -27,6 +27,7 @@ import { NotificationCardComponent } from './notification-card/notification-card
 import {MatCardModule} from '@angular/material/card';
 import { NgpImagePickerModule } from 'ngp-image-picker';
 import {MatBadgeModule} from '@angular/material/badge';
+import { AddPostComponent } from './add-post/add-post.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     ProfilePageComponent,
     HomePageComponent,
     NotificationsPageComponent,
-    NotificationCardComponent
+    NotificationCardComponent,
+    AddPostComponent
   ],
   imports: [
     BrowserModule,

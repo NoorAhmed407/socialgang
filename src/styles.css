@@ -38,6 +38,15 @@ body { margin: 0; font-family: 'Raleway', sans-serif;}
 }
 
 
+.list-style{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    /* height: fit-content */
+}
+
+
 
 @media (max-width: 575.98px) {   
     .screen-title{

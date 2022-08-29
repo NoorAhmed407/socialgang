@@ -1,0 +1,49 @@
+.post-card{
+    margin: 0 auto;
+    width: 50%;
+    /* min-height: 400px; */
+}
+
+.avatar-img{
+    border: 2px solid var(--secondary-color);
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+}
+.user-name{
+    font-size: 1.2em;
+}
+
+.post-title{
+    font-size: 1.7rem;
+}
+.post-desc-less{
+    font-size: 0.8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.post-desc-more{
+        font-size: 0.8em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 0;
+        -webkit-box-orient: vertical;
+}
+
+.post-image{
+    width: 100%;
+    height: 300px;
+}
+
+
+
+@media (max-width: 1080px) {   
+    .post-card{
+        width: 100%;
+    }
+ }

@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostCardComponent implements OnInit {
 
+  showMore: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+ 
+
+  onToggleShowMore(){
+    this.showMore = !this.showMore;
   }
 
 }
