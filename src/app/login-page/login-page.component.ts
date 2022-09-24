@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { catchError } from 'rxjs';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login-page',
@@ -17,9 +19,9 @@ export class LoginPageComponent implements OnInit {
   seePassword: boolean = false;
   loading:boolean = false;
 
-  constructor(private toastr: ToastrService, private router: Router) { }
+  constructor(private toastr: ToastrService, private router: Router, private authService:AuthService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
   }
 
   validateEmail(email:string):boolean{
@@ -41,14 +43,18 @@ export class LoginPageComponent implements OnInit {
     if(!this.validateEmail(email)){
      return this.toastr.error('Please Enter the correct Email');
     }
+    
     this.loading = true;
-
-    setTimeout(()=>{
-      this.loading = false;
-      this.toastr.success('User Loggedin Successfully');
-      this.router.navigateByUrl('/home');
-
-    },3000)
+    this.authService.userLogin({email,password})
+      .subscribe(data => {
+        this.loading=false;
+        localStorage.setItem('user',JSON.stringify(data?.data));
+        this.toastr.success(data?.message);
+        this.router.navigateByUrl('/');
+      }, data=>{
+        this.loading = false
+      return this.toastr.error(data?.error?.message);
+      })
 
   }
 }

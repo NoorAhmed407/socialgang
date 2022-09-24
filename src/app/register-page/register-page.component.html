@@ -7,24 +7,31 @@
             <div class="line"></div>
         </div>
 
-        <form class="example-form">
+        <form class="example-form" (ngSubmit)="registerUser()" [formGroup]="registerForm">
             <mat-form-field class="full-width-field" appearance="fill">
                 <mat-label>Name</mat-label>
-                <input matInput type="text" placeholder="Your Name" value="">
+                <input matInput formControlName="name" type="text" placeholder="Your Name" value="">
               </mat-form-field>
 
             <mat-form-field class="full-width-field" appearance="fill">
               <mat-label>Email</mat-label>
-              <input matInput type="email" placeholder="abc@test.com" value="">
+              <input matInput type="email" formControlName="email" placeholder="abc@test.com" value="">
             </mat-form-field>
 
             <mat-form-field class="full-width-field" appearance="fill">
                
                 <mat-label>Password</mat-label>
-                <input matInput type="password" placeholder="your password here" value="">
+                <input matInput type="password" formControlName="password" placeholder="your password here" value="">
               </mat-form-field>
 
-              <button mat-raised-button class="loginbtn" color="primary">Register</button>
+              <div class="d-flex flex-row justify-content-center align-items-center" *ngIf="loading else elseBlock">
+                <mat-spinner diameter="30"></mat-spinner>
+              </div>
+
+              <ng-template #elseBlock>
+                  <button mat-raised-button type="submit" class="loginbtn" color="primary">Register</button>
+              </ng-template>
+              
           </form>
 
           <h5 class="mb-3">Already have an Account? <a routerLink="/login">Login</a></h5>
