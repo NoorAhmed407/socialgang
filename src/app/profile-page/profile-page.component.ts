@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ImagePickerConf } from 'ngp-image-picker';
+import { ToastrService } from 'ngx-toastr';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-profile-page',
@@ -14,9 +16,23 @@ export class ProfilePageComponent implements OnInit {
     width: '150px',
     height: '150px',
   };
-  constructor(private router: Router) { }
+  data:any = null;
+  user:any;
+
+  constructor(private toastr: ToastrService, private router: Router, private authService:AuthService) {
+
+    this.user = localStorage.getItem('user');
+    this.user = JSON.parse(this.user);
+   }
 
   ngOnInit(): void {
+      
+      this.authService.getUserDetail({'Authorization': 'Bearer '+this?.user?.token}).subscribe(data=>{
+        console.log("dataaaaaaa", data.data);
+        this.data = data?.data;
+      }, err=>{
+      return this.toastr.error(err?.error?.message);
+      });
   }
 
   onImageChange(image:any){

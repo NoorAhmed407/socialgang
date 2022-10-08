@@ -1,4 +1,5 @@
-<app-post-card></app-post-card>
-<app-post-card></app-post-card>
-<app-post-card></app-post-card>
-<app-post-card></app-post-card>
+
+<div *ngFor="let item of posts; ind of index">
+    <app-post-card [item]="item"></app-post-card>
+
+</div>
